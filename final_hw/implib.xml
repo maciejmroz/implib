@@ -1,0 +1,97 @@
+<library
+	name="image_processing"
+	fxc="D:/programs/dx9sdk/Utilities/bin/x86/fxc"
+	psa="D:/programs/dx9sdk/Utilities/bin/x86/psa"
+	vsa="D:/programs/dx9sdk/Utilities/bin/x86/vsa">
+	
+	<group name="simple_ops" profile="ps_2_0">
+		<shader name="add" source="add.hlsl"/>
+		<shader name="add_color" source="add_color.hlsl"/>
+		<shader name="mul" source="mul.hlsl"/>
+		<shader name="mul_color" source="mul_color.hlsl"/>
+		<shader name="sub" source="sub.hlsl"/>
+		<shader name="sub_color" source="sub_color.hlsl"/>
+		<shader name="signed_add" source="signed_add.hlsl"/>
+	</group>
+	<group name="filters" profile="ps_2_0">
+		<shader name="grayscale" source="grayscale.hlsl"/>
+		<shader name="hsv_adjust_2_a" source="hsv_adjust.hlsl" profile="ps_2_a"/>
+		<shader name="hsv_adjust_2_b" source="hsv_adjust.hlsl" profile="ps_2_b"/>
+		<shader name="hsv_adjust_3_0" source="hsv_adjust.hlsl" profile="ps_3_0"/>
+		<shader name="sobel_edge_detect" source="sobel_edge_detect.hlsl"/>
+	</group>
+	<group profile="ps_2_0" name="generators">
+		<shader name="checkers_aa" source="checkers_aa.hlsl"/>
+	</group>
+	<group name="noises_2_b" profile="ps_2_b">
+		<shader name="noise_1_octave_2_b" source="noise.hlsl" defines="OCTAVES=1"/>
+		<shader name="noise_2_octaves_2_b" source="noise.hlsl" defines="OCTAVES=2"/>
+		<shader name="noise_3_octaves_2_b" source="noise.hlsl" defines="OCTAVES=3"/>
+		<shader name="noise_4_octaves_2_b" source="noise.hlsl" defines="OCTAVES=4"/>
+		<shader name="noise_5_octaves_2_b" source="noise.hlsl" defines="OCTAVES=5"/>
+		<shader name="noise_6_octaves_2_b" source="noise.hlsl" defines="OCTAVES=6"/>
+		<shader name="noise_final_remap_2_b" source="noise_final_remap.hlsl"/>
+		<shader name="turbulence_1_octave_2_b" source="turbulence.hlsl" defines="OCTAVES=1"/>
+		<shader name="turbulence_2_octaves_2_b" source="turbulence.hlsl" defines="OCTAVES=2"/>
+		<shader name="turbulence_3_octaves_2_b" source="turbulence.hlsl" defines="OCTAVES=3"/>
+		<shader name="turbulence_4_octaves_2_b" source="turbulence.hlsl" defines="OCTAVES=4"/>
+		<shader name="turbulence_5_octaves_2_b" source="turbulence.hlsl" defines="OCTAVES=5"/>
+		<shader name="turbulence_6_octaves_2_b" source="turbulence.hlsl" defines="OCTAVES=6"/>
+	</group>
+	<group name="noises_2_a" profile="ps_2_a">
+		<shader name="noise_1_octave_2_a" source="noise.hlsl" defines="OCTAVES=1"/>
+		<shader name="noise_2_octaves_2_a" source="noise.hlsl" defines="OCTAVES=2"/>
+		<shader name="noise_3_octaves_2_a" source="noise.hlsl" defines="OCTAVES=3"/>
+		<shader name="noise_4_octaves_2_a" source="noise.hlsl" defines="OCTAVES=4"/>
+		<shader name="noise_5_octaves_2_a" source="noise.hlsl" defines="OCTAVES=5"/>
+		<shader name="noise_6_octaves_2_a" source="noise.hlsl" defines="OCTAVES=6"/>
+		<shader name="noise_final_remap_2_a" source="noise_final_remap.hlsl"/>
+		<shader name="turbulence_1_octave_2_a" source="turbulence.hlsl" defines="OCTAVES=1"/>
+		<shader name="turbulence_2_octaves_2_a" source="turbulence.hlsl" defines="OCTAVES=2"/>
+		<shader name="turbulence_3_octaves_2_a" source="turbulence.hlsl" defines="OCTAVES=3"/>
+		<shader name="turbulence_4_octaves_2_a" source="turbulence.hlsl" defines="OCTAVES=4"/>
+		<shader name="turbulence_5_octaves_2_a" source="turbulence.hlsl" defines="OCTAVES=5"/>
+		<shader name="turbulence_6_octaves_2_a" source="turbulence.hlsl" defines="OCTAVES=6"/>
+	</group>
+	<group name="gradients" profile="ps_2_0">
+		<shader name="rgradient_c" source="rgradient_c.hlsl"/>
+		<shader name="rgradient_c_cubic" source="rgradient_c_cubic.hlsl"/>
+		<shader name="rgradient_c_sin" source="rgradient_c_sin.hlsl"/>
+		<shader name="rgradient_e" source="rgradient_e.hlsl"/>
+		<shader name="rgradient_e_sin" source="rgradient_e_sin.hlsl"/>
+	</group>
+	<group name="vector_fields" profile="ps_2_0">
+		<shader name="lwave_x_vf" source="lwave_x_vf.hlsl"/>
+		<shader name="lwave_y_vf" source="lwave_y_vf.hlsl"/>
+		<shader name="wave_x_vf" source="wave_x_vf.hlsl"/>
+		<shader name="wave_y_vf" source="wave_y_vf.hlsl"/>
+	</group>
+	<group name="distortions" profile="ps_2_0">
+		<shader name="lwave_x" source="lwave_x.hlsl"/>
+		<shader name="lwave_y" source="lwave_y.hlsl"/>
+		<shader name="vf_distort" source="vf_distort.hlsl"/>
+		<shader name="wave_x" source="wave_x.hlsl"/>
+		<shader name="wave_y" source="wave_y.hlsl"/>
+	</group>
+	<group name="distortions_bicubic_2_a"  profile="ps_2_a">
+		<shader name="lwave_x_bicubic_2_a" source="lwave_x_bicubic.hlsl"/>
+		<shader name="lwave_y_bicubic_2_a" source="lwave_y_bicubic.hlsl"/>
+		<shader name="vf_distort_bicubic_2_a" source="vf_distort_bicubic.hlsl"/>
+		<shader name="wave_x_bicubic_2_a" source="wave_x_bicubic.hlsl"/>
+		<shader name="wave_y_bicubic_2_a" source="wave_y_bicubic.hlsl"/>
+	</group>
+	<group name="distortions_bicubic_2_b"  profile="ps_2_b">
+		<shader name="lwave_x_bicubic_2_b" source="lwave_x_bicubic.hlsl"/>
+		<shader name="lwave_y_bicubic_2_b" source="lwave_y_bicubic.hlsl"/>
+		<shader name="vf_distort_bicubic_2_b" source="vf_distort_bicubic.hlsl"/>
+		<shader name="wave_x_bicubic_2_b" source="wave_x_bicubic.hlsl"/>
+		<shader name="wave_y_bicubic_2_b" source="wave_y_bicubic.hlsl"/>
+	</group>
+	<group name="distortions_bicubic_3_0"  profile="ps_3_0">
+		<shader name="lwave_x_bicubic_3_0" source="lwave_x_bicubic.hlsl"/>
+		<shader name="lwave_y_bicubic_3_0" source="lwave_y_bicubic.hlsl"/>
+		<shader name="vf_distort_bicubic_3_0" source="vf_distort_bicubic.hlsl"/>
+		<shader name="wave_x_bicubic_3_0" source="wave_x_bicubic.hlsl"/>
+		<shader name="wave_y_bicubic_3_0" source="wave_y_bicubic.hlsl"/>
+	</group>
+</library>
